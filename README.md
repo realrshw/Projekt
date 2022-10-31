@@ -1,2 +1,2 @@
-# Projekt
-Projekt fürden kleinen Jamie Pimmel
+# Projekt von Jamies Team
+Login und Registartion
