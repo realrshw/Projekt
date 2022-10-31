@@ -1,2 +1,2 @@
 # Projekt
-Projekt fürden kleinen Jamie Pimmel
+Jamie ist dumm
