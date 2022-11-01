@@ -1,2 +1,2 @@
 # Projekt
-Lets Go!
+Lets GO!
