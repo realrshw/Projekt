@@ -7,6 +7,7 @@
         
         <title>Instagrum</title>
     </head>
+    
     <body>
 
         <?php
