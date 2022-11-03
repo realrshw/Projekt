@@ -11,7 +11,7 @@
     <body>
 
         <?php
-
+Hi
         #wenn nicht login --> weiter zu login seite
 
         #Story
