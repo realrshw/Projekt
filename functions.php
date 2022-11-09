@@ -24,4 +24,20 @@ if (empty($passwort)){
 
    }
 
+
+
+function uservorhanden ($username){
+
+if (file_exists("userdater/$username.txt")) {
+
+    echo "$username Dieser Nutzername ist vergeben";
+
+} else {
+
+    echo "  ";
+
+}
+}
+
+
 ?>
