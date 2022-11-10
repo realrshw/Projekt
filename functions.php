@@ -1,4 +1,7 @@
 <?php
+
+function passwortgut(){
+
 #Passwort Anforderungen
 if (empty($passwort)){
 
@@ -23,20 +26,20 @@ if (empty($passwort)){
     $passwortFalsch= "Das Passwort muss mindestens 8 Zeichen lang sein.";
 
    }
-
+}
 
 
 function uservorhanden ($username){
 
-if (file_exists("userdater/$username.txt")) {
+    if (file_exists("userdater/$username.txt")) {
 
-    echo "$username Dieser Nutzername ist vergeben";
+        echo "$username Dieser Nutzername ist vergeben";
 
-} else {
+    } else {
 
-    echo "  ";
+        echo "  ";
 
-}
+    }
 }
 
 
