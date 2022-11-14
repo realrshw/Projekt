@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@font-face
+{
+    src: url('FontsFree-Net-Billabong.ttf');
+    font-family: 'FontsFree-Net-Billabong';
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'FontsFree-Net-Billabong';
+    transition: 0.5s;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    width: 650px;
+    height: 450px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.box1
+{
+    width: 50%;
+    height: 100%;
+    background: green;
+    position: absolute;
+    left: 0;
+}
+.image1
+{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+}
+.input
+{
+    display: flex;
+    justify-content: center;
+}
+.box h1
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    color: white;
+}
+.box form
+{
+    margin-top: 50px;
+}
+.box input
+{
+    padding: 5px 5px;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.box input[type="submit"]
+{
+    border: none;
+    background: #a72121;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.box img
+{
+    width: 100%;
+    height: 100%;
+}
+.box p
+{
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin-left: 5px;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.box2
+{
+    width: 50%;
+    height: 100%;
+    background: blue;
+    position: absolute;
+    right: 0;
+}
+.image2
+{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+}
+.input
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.input1
+{
+    background: linear-gradient(135deg,#405DE6,#5B51D8,#833AB4,#C13584,#E1306C);
+    top: 0%;
+}
+.input2
+{
+    background: linear-gradient(135deg,#FD1D1D,#F56040,#F77737,#FCAF45,#FFDC80);
+    top: -100%;
+}
+
+.weg
+{
+    top: -100%;
+    transition: 0.5s;
+}
+.weg2
+{
+    top: 100%;
+    transition: 0.5s;
+}
+.hin
+{
+    top: 0%;
+    transition: 0.5s;
+}

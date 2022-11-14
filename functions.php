@@ -1,27 +1,48 @@
 <?php
-#Passwort Anforderungen
-if (empty($passwort)){
 
-    $falsch = true;
+    function login(){
+        
+        $user = $_REQUEST["username"];
+        $passwort = $_REQUEST["password"];
 
-    $passwortFalsch = "Bitte Passwort eingeben.";
+        if(file_exists("userdata/$user.txt")){
 
-   } else if (preg_match("/[a-z]/", $passwort)
+            
+            $datei = fopen("userdata/$user.txt", "r");
+            $search = fgets($datei);
+            
+            
+            if ($search == $passwort){
+                header("location: https://google.com");
+            }
+            else
+            {
+                "<h1>Passwort leider falsch!</h1>";
+            }
+            
+            
+            fclose($datei);
+        }else{
+            echo "Gibts nicht";
+        }
 
-       && preg_match("/[A-Z]/", $passwort)
+    }
 
-       && preg_match("/[0-9]/", $passwort)) {
+    function register(){
+        
+        
 
-    $falsch = true;
+        $user = $_REQUEST["username"];
+        $passwort = $_REQUEST["password"];
+        $datei = fopen("userdata/$user.txt","w+");
 
-    $passwortFalsch = "Das Passwort muss Kleinbuchstaben, Großbuchstaben und Zahlen enthalten.";
 
-   } else if (strlen($passwort) <8) {
+        fwrite($datei,$passwort);
 
-    $falsch = true;
+        fclose($datei);
 
-    $passwortFalsch= "Das Passwort muss mindestens 8 Zeichen lang sein.";
+        header("location: https://google.com");
 
-   }
+    }
 
 ?>
