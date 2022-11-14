@@ -28,7 +28,7 @@ if (empty($passwort)){
    }
 }
 
-
+#überprüft ob der User vorhanden ist
 function uservorhanden ($username){
 
     if (file_exists("userdater/$username.txt")) {
@@ -42,6 +42,7 @@ function uservorhanden ($username){
     }
 }
 
+#überprüft ob der User keine flaschen namen enthält
 function usernamegut(){
     if(empty(trim($_POST["username"]))){
            $username_err = "Please enter username.";
