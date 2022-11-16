@@ -1,13 +1,12 @@
 <?php
 
-function passwortgut(){
+function passwortgut($passwort){
 
 #Passwort Anforderungen
 if (empty($passwort)){
 
-    $falsch = true;
 
-    $passwortFalsch = "Bitte Passwort eingeben.";
+    $text = "Bitte Passwort eingeben.";
 
    } else if (preg_match("/[a-z]/", $passwort)
 
@@ -15,17 +14,14 @@ if (empty($passwort)){
 
        && preg_match("/[0-9]/", $passwort)) {
 
-    $falsch = true;
 
-    $passwortFalsch = "Das Passwort muss Kleinbuchstaben, Großbuchstaben und Zahlen enthalten.";
+    $text = "Das Passwort muss Kleinbuchstaben, Großbuchstaben und Zahlen enthalten.";
 
    } else if (strlen($passwort) <8) {
 
-    $falsch = true;
+    $text= "Das Passwort muss mindestens 8 Zeichen lang sein.";
 
-    $passwortFalsch= "Das Passwort muss mindestens 8 Zeichen lang sein.";
-
-    return($passwortFalsch);
+    return($text);
 
    }
 }
@@ -35,12 +31,11 @@ function uservorhanden ($username){
 
     if (file_exists("userdater/$username.txt")) {
 
-        $text = "$username: Dieser Nutzername ist vergeben";
+        $text = "$username: Dieser Nutzername ist leider vergeben.";
 
     } else {
 
-        $text =  "Nutzername OK";
-
+        $text =  "Dein Nutzername ist noch frei.";
 
     }
 
@@ -48,7 +43,10 @@ function uservorhanden ($username){
 }
 
 #überprüft ob der User keine flaschen namen enthält
-function usernamegut(){
+
+#nicht sicher ob das functioniert
+function usernamegut($username){
+
     if(empty(trim($_POST["username"]))){
            $username_err = "Please enter username.";
        } else{
@@ -56,5 +54,18 @@ function usernamegut(){
        }
    }
 
+function likehinzufuegen ($user,$post){
+
+    $button = fponit (Bildleer)
+        
+    if ($button) { oncliked than  
+        $data = fopen (likes.txt);
+        $likes = fgets ($data);
+        $likes = $likes + 1;
+        fwrite($data,$likes);
+        $button = fponit (Bildrot)
+    }
+    
+}
 
 ?>
