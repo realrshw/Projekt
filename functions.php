@@ -25,7 +25,7 @@ if (empty($passwort)){
 
     $passwortFalsch= "Das Passwort muss mindestens 8 Zeichen lang sein.";
 
-    returm($passwortFalsch);
+    return($passwortFalsch);
 
    }
 }
@@ -35,11 +35,12 @@ function uservorhanden ($username){
 
     if (file_exists("userdater/$username.txt")) {
 
-        $text = "$username Dieser Nutzername ist vergeben";
+        $text = "$username: Dieser Nutzername ist vergeben";
 
     } else {
 
         $text =  "Nutzername OK";
+
 
     }
 
