@@ -11,13 +11,7 @@
     <body>
 
         <?php
-
-        #wenn nicht login --> weiter zu login seite
-
-        #Story
-        #Bilder
-        #footer
-
+        cookielesen();
         ?>
             
     </body>
