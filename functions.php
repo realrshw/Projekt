@@ -58,14 +58,25 @@ function likehinzufuegen ($user,$post){
 
     $button = fponit (Bildleer)
         
-    if ($button) { oncliked than  
-        $data = fopen (likes.txt);
-        $likes = fgets ($data);
+    if ($button) { oncliked than
+
+        $data = fopen ("likes.txt","r+");
+        $likes = fgets ("$data");
         $likes = $likes + 1;
-        fwrite($data,$likes);
+        fwrite("$data,$likes");
         $button = fponit (Bildrot)
     }
     
+}
+
+function comment_hinzu($user,$comment,$creator,$post){
+
+    $data = fopen("assets/data/$creator/$post/kommentare/$user.txt","w");
+
+    fwrite("$data","$comment");
+
+    fclose($data);
+
 }
 
 ?>
