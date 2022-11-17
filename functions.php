@@ -42,18 +42,7 @@ function uservorhanden ($username){
     return($text);
 }
 
-#überprüft ob der User keine flaschen namen enthält
-
-#nicht sicher ob das functioniert
-function usernamegut($username){
-
-    if(empty(trim($_POST["username"]))){
-           $username_err = "Please enter username.";
-       } else{
-           $username = trim($_POST["username"]);
-       }
-   }
-
+#Like hinzufügen
 function likehinzufuegen ($user,$post){
 
     $button = fponit (Bildleer)
@@ -69,6 +58,7 @@ function likehinzufuegen ($user,$post){
     
 }
 
+#neuen Kommentar hinzufügen
 function comment_hinzu($user,$comment,$creator,$post){
 
     $data = fopen("assets/data/$creator/$post/kommentare/$user.txt","w");
@@ -78,5 +68,17 @@ function comment_hinzu($user,$comment,$creator,$post){
     fclose($data);
 
 }
+
+#überprüft ob der User keine flaschen namen enthält
+
+#nicht sicher ob das functioniert
+function usernamegut($username){
+
+    if(empty(trim($_POST["username"]))){
+           $username_err = "Please enter username.";
+       } else{
+           $username = trim($_POST["username"]);
+       }
+   }
 
 ?>
