@@ -24,4 +24,18 @@ if (empty($passwort)){
 
    }
 
+   function ordner(){
+    $ozahl = 1
+    while ($ozahl < 2){
+        $ozahlcheck = 1;
+        if (file_exists(assets/data/$ozahlcheck)) {
+            $ozahlcheck++;
+        } else {
+            $ozahl = 3;
+            
+            
+        }
+    }
+   }
+
 ?>
