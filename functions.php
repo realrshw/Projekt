@@ -5,7 +5,6 @@ function passwortgut($passwort){
 #Passwort Anforderungen
 if (empty($passwort)){
 
-
     $text = "Bitte Passwort eingeben.";
 
    } else if (preg_match("/[a-z]/", $passwort)
