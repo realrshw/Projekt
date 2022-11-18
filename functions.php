@@ -68,16 +68,16 @@ function comment_hinzu($user,$comment,$creator,$post){
 
 }
 
-#überprüft ob der User keine flaschen namen enthält
+    #überprüft ob der User keine flaschen namen enthält
 
-#nicht sicher ob das functioniert
-function usernamegut($username){
+    #nicht sicher ob das functioniert
+    function usernamegut($username){
 
-    if(empty(trim($_POST["username"]))){
-           $username_err = "Please enter username.";
-       } else{
-           $username = trim($_POST["username"]);
-       }
-   }
+        if(empty(trim($_POST["username"]))){
+            $username_err = "Please enter username.";
+        } else{
+            $username = trim($_POST["username"]);
+        }
+    }
 
 ?>
