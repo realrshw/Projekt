@@ -1,6 +1,6 @@
 <?php
 
-function passwortgut($passwort){
+function passwort_sicher($passwort){
 
 #Passwort Anforderungen
 if (empty($passwort)){
@@ -26,7 +26,7 @@ if (empty($passwort)){
 }
 
 #überprüft ob der User vorhanden ist
-function uservorhanden ($username){
+function user_exist($username){
 
     if (file_exists("userdater/$username.txt")) {
 
@@ -42,7 +42,7 @@ function uservorhanden ($username){
 }
 
 #Like hinzufügen
-function likehinzufuegen ($user,$post){
+function like_hinzu($user,$post){
 
     $button = fponit (Bildleer)
         
@@ -71,7 +71,7 @@ function comment_hinzu($user,$comment,$creator,$post){
     #überprüft ob der User keine flaschen namen enthält
 
     #nicht sicher ob das functioniert
-    function usernamegut($username){
+    function username_gut($username){
 
         if(empty(trim($_POST["username"]))){
             $username_err = "Please enter username.";
