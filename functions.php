@@ -37,15 +37,7 @@
         }
     }
    }
-function cookielesen(){
-            #Kontrollieren ob User Angemeldet ist
-            $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
-            if(is_numeric($cookiewert)){
-               
-            }else{
-                header('Location: http://www.google.com/');
-            }
-}
+
 <?php
 //login
     function login(){
