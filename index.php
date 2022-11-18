@@ -11,7 +11,14 @@
    
         
     include("functions.php");
-    cookielesen();
+            #Kontrollieren ob User Angemeldet ist
+            $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
+            if(is_numeric($cookiewert)){
+               goto a;
+            }else{
+                header('Location: http://www.google.com/');
+            }
+}       a:
     if(isset($_POST["login"])){
         login();
     }elseif(isset($_POST["register"])){
