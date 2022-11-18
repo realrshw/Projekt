@@ -9,9 +9,9 @@
 
 <?php
    
-     cookielesen();   
+        
     include("functions.php");
-
+    cookielesen();
     if(isset($_POST["login"])){
         login();
     }elseif(isset($_POST["register"])){
