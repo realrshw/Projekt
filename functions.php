@@ -51,7 +51,7 @@ function like_hinzu($user,$post){
         $data = fopen ("likes.txt","r+");
         $likes = fgets ("$data");
         $likes = $likes + 1;
-        fwrite("$data,$likes");
+        fwrite("$data","$likes");
         $button = fponit (Bildrot)
     }
     
@@ -79,5 +79,4 @@ function comment_hinzu($user,$comment,$creator,$post){
             $username = trim($_POST["username"]);
         }
     }
-
 ?>
