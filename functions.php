@@ -18,11 +18,13 @@
         $datei_pass = fopen("assets/userdata/$i/passwort.txt","r+");
         $pass_check = fgets($datei_pass);
         fclose($datei_pass);
+        
+        #Cookie anlegen
+        setcookie('userid', '$i', time()+3600000); 
 
-            
         if($mail_check == $email && $pass_check == $passwort){
 
-            header("location: https://google.com");
+            header("location: https://jamie.ml/unterseiten/start.php");
             break;
             
         }else{
@@ -59,7 +61,10 @@
             $nachname = $_POST["nachname"];
         
         $user_id = $zahl;
+        
 
+        #Cookie anlegen
+        setcookie('userid', '$zahl', time()+3600000);
 
         $datei_pass = fopen("assets/userdata/$zahl/passwort.txt","w+");
         fwrite($datei_pass,$passwort);
@@ -95,9 +100,9 @@
         #Kontrollieren ob User Angemeldet ist
         $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
         if(is_numeric($cookiewert)){
-            header('Location: http://www.example.com/');
+            header('Location: http://jamie.ml/unterseiten/start.php');
         }else{
-            header('Location: http://www.google.com/');
+            header('Location: http://www.jamie.ml/unterseiten/login.php');
         }
 }
 ?>
