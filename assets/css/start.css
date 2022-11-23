@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @font-face
 {
-    src: url('FontsFree-Net-Billabong.ttf');
+    src: url('/assets/font/FontsFree-Net-Billabong.ttf');
     font-family: 'FontsFree-Net-Billabong';
 }
 *
