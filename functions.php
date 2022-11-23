@@ -90,7 +90,7 @@
         fwrite($datei_user_id,$user_id);
         fclose($datei_user_id);
 
-        header("location: /home");
+        header("location: https://jamie.ml/unterseiten/start.php");
 
         }else{
             echo "Ewas hast du vergessen";
