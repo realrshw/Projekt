@@ -91,5 +91,13 @@
             echo "Ewas hast du vergessen";
         }
     }
-
+    function cookielesen(){
+        #Kontrollieren ob User Angemeldet ist
+        $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
+        if(is_numeric($cookiewert)){
+            header('Location: http://www.example.com/');
+        }else{
+            header('Location: http://www.google.com/');
+        }
+}
 ?>

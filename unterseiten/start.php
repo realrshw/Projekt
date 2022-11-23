@@ -2,14 +2,14 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8" http-equiv="refresh" content="">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="../assets/css/start.css">
 </head>
 <body>
 
 <?php
 
-    include("functions.php");
+    include("../functions.php");
 
     if(isset($_POST["login"])){
         login();
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div id="hin1" class="image1">
-                <img src="key-g696c2c212_1920.jpg" alt="">
+                <img src="../assets/img/key-g696c2c212_1920.jpg" alt="">
             </div>
         </div>
         
@@ -56,13 +56,13 @@
             </div>
             </div>
             <div id="weg2" class="image2">
-                <img src="key-g77bf31366_1920.jpg" alt="">
+                <img src="../assets/img/key-g77bf31366_1920.jpg" alt="">
             </div>
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="../assets/js/start.js"></script>
     
 </body>
 </html>
