@@ -11,6 +11,7 @@
     <body>
 
         <?php
+        include 'functions.php';
         cookielesen();
         ?>
             
