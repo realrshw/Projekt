@@ -31,7 +31,7 @@
                         <input placeholder="Passwort" type="text" name="password" id=""><br>
                         <input type="submit" name="login" value="Einloggen">
                     </form>
-                    <p onclick="register()">Du hast noch keinen Account</p>
+                    <p onclick="register()">Du hast noch keinen Account?</p>
                 </div>
             </div>
             <div id="hin1" class="image1">
@@ -52,7 +52,7 @@
                     <input placeholder="Passwort" type="text" name="password" id=""><br>
                     <input type="submit" name="register" value="Registrieren">
                 </form>
-                <p onclick="register()">Du hast noch keinen Account</p>
+                <p onclick="register()">Hast du schon einen Account?</p>
             </div>
             </div>
             <div id="weg2" class="image2">
