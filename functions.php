@@ -92,7 +92,7 @@ function ausgeben(){
         
         fclose($data);
         
-        echo "$text";
+        return ($text);
         
     }
         
