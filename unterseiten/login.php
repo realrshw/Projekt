@@ -9,7 +9,7 @@
 
 <?php
 
-    include("/functions.php");
+    include("../functions.php");
 
     if(isset($_POST["login"])){
         login();
@@ -26,7 +26,7 @@
             <div id="weg1" class="input input1">
                 <div>
                     <h1>Login</h1>
-                    <form action="/unterseiten/start.php" method="POST">
+                    <form action="" method="POST">
                         <input placeholder="E-Mail" type="text" name="email" id=""><br>
                         <input placeholder="Passwort" type="text" name="password" id=""><br>
                         <input type="submit" name="login" value="Einloggen">
@@ -44,7 +44,7 @@
             <div id="hin2" class="input input2">
                 <div>
                 <h1>Registrierung</h1>
-                <form action="/unterseiten/start.php" method="POST">
+                <form action="" method="POST">
                     <input placeholder="Vorname" type="text" name="vorname" id=""><br>
                     <input placeholder="Nachname" type="text" name="nachname" id=""><br>
                     <input placeholder="Benutzername" type="text" name="username" id=""><br>
