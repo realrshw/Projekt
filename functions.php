@@ -46,11 +46,12 @@
 
         while($i < $j){
             if(!file_exists("assets/userdata/$i")){
-                mkdir("/assets/userdata/$i","0700", true);break;
-                mkdir("/assets/userdata/$i/benutzerdaten", "0700",true);
-                mkdir("/assets/userdata/$i/post", "0700",true);
-                mkdir("/assets/userdata/$i/abonnierte", "0700",true);
-                mkdir("/assets/userdata/$i/messenger", "0700",true);
+                mkdir("/assets/userdata/$i");
+                mkdir("/assets/userdata/$i/benutzerdaten");
+                mkdir("/assets/userdata/$i/post");
+                mkdir("/assets/userdata/$i/abonnierte");
+                mkdir("/assets/userdata/$i/messenger");
+                break;
             }else{
                 $i++;
             }
