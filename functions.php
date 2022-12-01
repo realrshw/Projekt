@@ -24,7 +24,7 @@
 
         if($mail_check == $email && $pass_check == $passwort){
 
-            header("location: https://6525.webhost-05.my-host.network/unterseiten/start.php");
+            header("location: https://jamie.ml/unterseiten/start.php");
             break;
             
         }else{
@@ -94,7 +94,7 @@
         fwrite($datei_user_id,$user_id);
         fclose($datei_user_id);
 
-        header("location: https://6525.webhost-05.my-host.network/unterseiten/start.php");
+        header("location: https://jamie.ml/unterseiten/start.php");
 
         }else{
             echo "Ewas hast du vergessen";
@@ -104,9 +104,9 @@
         #Kontrollieren ob User Angemeldet ist
         $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
         if(is_numeric($cookiewert)){
-            header('Location: http://6525.webhost-05.my-host.network/unterseiten/start.php');
+            header('Location: http://jamie.ml/unterseiten/start.php');
         }else{
-            header('Location: http://www.6525.webhost-05.my-host.network/unterseiten/login.php');
+            header('Location: http://jamie.ml/unterseiten/login.php');
         }
 }
 ?>
