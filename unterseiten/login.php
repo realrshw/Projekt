@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" http-equiv="refresh" content="">
     <title>Instagram</title>
-    <link rel="stylesheet" href="../assets/css/start.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
 

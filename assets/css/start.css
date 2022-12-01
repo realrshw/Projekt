@@ -1,144 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@font-face
-{
-    src: url('/assets/font/FontsFree-Net-Billabong.ttf');
-    font-family: 'FontsFree-Net-Billabong';
-}
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'FontsFree-Net-Billabong';
-    transition: 0.5s;
-}
-body
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.container
-{
-    width: 650px;
-    height: 510px;
-    background: red;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-.box1
-{
-    width: 50%;
-    height: 100%;
-    background: green;
-    position: absolute;
-    left: 0;
-}
-.image1
-{
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-}
-.input
-{
-    display: flex;
-    justify-content: center;
-}
-.box h1
-{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 2.5em;
-    letter-spacing: 4px;
-    color: white;
-}
-.box form
-{
-    margin-top: 20px;
-}
-.box input
-{
-    padding: 5px 5px;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-.box input[type="submit"]
-{
-    border: none;
-    background: #a72121;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 10px;
-    cursor: pointer;
-    font-family: sans-serif;
-}
-.box img
-{
-    width: 100%;
-    height: 100%;
-}
-.box p
-{
-    color: white;
-    border: 2px solid black;
-    padding: 10px 20px;
-    margin-left: 5px;
-    position: absolute;
-    bottom: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-.box2
-{
-    width: 50%;
-    height: 100%;
-    background: blue;
-    position: absolute;
-    right: 0;
-}
-.image2
-{
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-}
-.input
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.input1
-{
-    background: linear-gradient(135deg,#405DE6,#5B51D8,#833AB4,#C13584,#E1306C);
-    top: 0%;
-}
-.input2
-{
-    background: linear-gradient(135deg,#FD1D1D,#F56040,#F77737,#FCAF45,#FFDC80);
-    top: -100%;
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.body {
+    text-align: center;
 }
 
-.weg
-{
-    top: -100%;
-    transition: 0.5s;
+
+
+.headline  {
+width: 100%;
+height: 50px;
+border-width: 4px;
+border-style: solid;
+border-color: white;
+position: absolute;
+background-color: white;
+top: 0px;
+left: 0px;
 }
-.weg2
-{
-    top: 100%;
-    transition: 0.5s;
+
+.beitrag  {
+width: 900px;
+height: 1000px;
+border-width: 4px;
+border-style: solid;
+border-color: white;
+position: absolute;
+background-color: white;
+top: 100px;
+left: 16%;
 }
-.hin
+
+.logo
 {
-    top: 0%;
-    transition: 0.5s;
+ left:15%;
+ position: absolute;
 }
+
+form
+{
+ top:15;
+ left:43%;
+ position: absolute;
+}
+
+.haus
+{
+top:12;
+left:78%;
+position: absolute;
+}
+
+.teilen
+{
+top:12;
+left:80%;
+position: absolute;
+}
+
+.kompass
+{
+top:12;
+left:82%;
+position: absolute;
+}
+
+.herz
+{
+top:9;
+left:84%;
+position: absolute;
+}
+
+.beitrag1
+{
+top:45;
+left:0px;
+position: absolute;
+}
+
+.herzbeitrag
+{
+top: 950;
+left:1px;
+}
+
+.teilenbeitrag
+ {
+top: 954;
+left:83px;
+position: absolute;
+}
+
+.lesezeichen
+ {
+top: 954;
+left:860px;
+position: absolute;
+}
+
+.dreipunkte
+ {
+top: 5;
+left:860px;
+position: absolute;
+}
+
+.komentar
+ {
+top: 957;
+left:46px;
+position: absolute;
+ }
