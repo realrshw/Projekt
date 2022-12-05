@@ -139,46 +139,46 @@
       </form>
 
       <div class="haus">
-            <a href="projekt.php"><img src="haus.jpg" width="25" height="25""></a>
+            <a href="projekt.php"><img src="assets/img/icon/haus.jpg" width="25" height="25""></a>
       </div>
 
       <div class="teilen">
-            <a href=""><img src="teilen.jpg" width="25" height="25"</a>
+            <a href=""><img src="assets/img/icon/teilen.jpg" width="25" height="25"</a>
       </div>
 
       <div class="kompass">
-            <a href=""><img src="kompass.jpg" width="25" height="25"></a>
+            <a href=""><img src="assets/img/icon/kompass.jpg" width="25" height="25"></a>
       </div>
 
       <div class="herz">
-            <a href=""><img src="herz.jpg" width="30" height="30"></a>
+            <a href=""><img src="assets/img/icon/herz.jpg" width="30" height="30"></a>
       </div>
         <div class="beitrag">
 
             Nassenstein.Insta
 
       <div class="beitrag1">
-            <img src="beitrag1.png" width="900" height="900" border="0" alt="">
+            <img src="assets/img/icon/beitrag1.png" width="900" height="900" border="0" alt="">
       </div>
 
       <div class="herzbeitrag">
-            <img id="heart" src="herz.jpg" width="40" height="40" onClick="heart()">
+            <img id="heart" src="assets/img/icon/herz.jpg" width="40" height="40" onClick="heart()">
       </div>
 
       <div class="dreipunkte">
-            <a href=""><img src="dreipunkte.jpg" width="30" height="30"></a>
+            <a href=""><img src="assets/img/icon/dreipunkte.jpg" width="30" height="30"></a>
       </div>
 
       <div class="komentar">
-            <a href=""><img src="komentar.png" width="25" height="25"></a>
+            <a href=""><img src="assets/img/icon/komentar.png" width="25" height="25"></a>
       </div>
 
       <div class="teilenbeitrag">
-            <a href=""><img src="teilen.jpg" width="30" height="30"></a>
+            <a href=""><img src="assets/img/icon/teilen.jpg" width="30" height="30"></a>
       </div>
 
       <div class="lesezeichen">
-            <a href=""><img src="lesezeichen-removebg-preview.png" width="35" height="27"></a>
+            <a href=""><img src="assets/img/icon/lesezeichen-removebg-preview.png" width="35" height="27"></a>
       </div>
 
 
