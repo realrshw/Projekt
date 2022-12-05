@@ -27,8 +27,8 @@
                 <div>
                     <h1>Login</h1>
                     <form action="" method="POST">
-                        <input placeholder="E-Mail" type="text" name="email" id=""><br>
-                        <input placeholder="Passwort" type="text" name="password" id=""><br>
+                        <input placeholder="E-Mail" type="email" name="email" id=""><br>
+                        <input placeholder="Passwort" type="password" name="password" id=""><br>
                         <input type="submit" name="login" value="Einloggen">
                     </form>
                     <p onclick="register()">Du hast noch keinen Account?</p>
