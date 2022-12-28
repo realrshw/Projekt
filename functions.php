@@ -101,7 +101,7 @@
         }
     }
 
-//Cookie+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+//Cookie+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     function cookielesen(){
         #Kontrollieren ob User Angemeldet ist
         $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
