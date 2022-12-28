@@ -100,6 +100,8 @@
             echo "Ewas hast du vergessen";
         }
     }
+
+//Cookie+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
     function cookielesen(){
         #Kontrollieren ob User Angemeldet ist
         $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
@@ -109,4 +111,47 @@
             header('Location: http://jamie.ml/unterseiten/login.php');
         }
 }
+//Upload+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Einen neuen Post erstellen:
+//Wie viele Post hat dieser User bereits hochgeladen:
+
+$post_anzahl = $count;
+$userID = 0;
+$postID = $count + 1;
+
+$directory = "./assets/data/$userID/post/";
+
+function countFolders($directory) {
+  $files = scandir($directory);
+  $count = 0;
+  foreach ($files as $file) {
+    if (is_dir($directory . '/' . $file)) {
+      $count++;
+    }
+  }
+  return $count;
+}
+    echo "HallOMikaIstNerAlllllllllllleeerrrererererbesteste";
+    echo countFolders($directory);
+    echo "<br>";
+
+    $postID = $post_anzahl + 1;
+    mkdir("./assets/data/$userID/", 0777);
+    mkdir("./assets/data/$userID/post/", 0777);
+    mkdir("./assets/data/$userID/post/$post_id/", 0777);
+//Text
+    $Post = fopen("./assets/data/$userID/post/$postID/PostText.txt","w+");
+    $Post = fwrite($post_text);
+//Likes
+    $Likes = fopen("./assets/data/$userID/post/$postID/AnzahlLikes.txt","w+");
+    $Likes = fwrite("0");
+//Kommentare
+    $Kommentare = fopen("./assets/data/$userID/post/$postID/AnzahlKommentare.txt","w+");
+    mkdir("./assets/data/$userID/post/$postID/PostKommentare", 0777);
+    $Kommentare = fwrite("0");
+//close
+    fclose($datei);
+    fclose($datei);
+    fclose($datei);
 ?>
