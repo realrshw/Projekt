@@ -111,7 +111,7 @@
             header('Location: http://jamie.ml/unterseiten/login.php');
         }
 }
-//Upload+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Upload++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //Einen neuen Post erstellen:
 //Wie viele Post hat dieser User bereits hochgeladen:
