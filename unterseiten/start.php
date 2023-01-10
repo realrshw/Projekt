@@ -8,7 +8,7 @@
       <title>Document</title>
 
       <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+      <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 </head>
 
 <body>
@@ -16,33 +16,34 @@
 <div class="headline">
 
       <div class="logo">
-            <a href="projekt.php"><img src="assets/img/icon/instagramlogo.jpg" width="130" height="50"></a>
+            <a href="projekt.php"><img src="../assets/img/icon/instagramlogo.jpg" width="130" height="50"></a>
       </div>
       <form>
             <input type="Text" name="" value="" size="40" placeholder="Suchen">
       </form>
 
       <div class="haus">
-            <a href="projekt.php"><img src="assets/img/icon/haus.jpg" width="25" height="25"></a>
+            <a href="projekt.php"><img src="../assets/img/icon/haus.jpg" width="25" height="25"></a>
       </div>
 
       <div class="teilen">
-            <a href=""><img src="assets/img/icon/teilen.jpg" width="25" height="25"></a>
+            <a href=""><img src="../assets/img/icon/teilen.jpg" width="25" height="25"></a>
       </div>
 
       <div class="kompass">
-            <a href=""><img src="assets/img/icon/kompass.jpg" width="25" height="25"></a>
+            <a href=""><img src="../assets/img/icon/kompass.jpg" width="25" height="25"></a>
       </div>
 
       <div class="herz">
-            <a href=""><img src="assets/img/icon/herz.jpg" width="30" height="30"></a>
+            <a href=""><img src="../assets/img/icon/herz.jpg" width="30" height="30"></a>
       </div>
         
 
             <?php
             
-            include("functions.php");
-            echo "<script language=\"javascript\" type=\"text/javascript\" src=\"assets/js/home.js\"></script>";
+            include("../functions.php");
+            echo "<script language=\"javascript\" type=\"text/javascript\" src=\"../assets/js/home.js\"></script>";
+
             for($i=1;$i<100;$i++){
 
             $ausgabe = ausgeben();
@@ -66,12 +67,12 @@
 
                         <div id=\"Herz\">
                               <a href=\"like.php?userID=$userID&postID=$postID\">
-                                    <img class=\"heart\" id=\"heart$i\" src=\"assets/img/icon/herz.png\" width=\"40\" height=\"40\" onClick=\"heart($i)\">
+                                    <img class=\"heart\" id=\"heart$i\" src=\"../assets/img/icon/herz.png\" width=\"40\" height=\"40\" onClick=\"heart($i)\">
                               </a>
                         </div>
 
                         <div class=\"comment\">
-                              <img src=\"assets/img/icon/komentar.png\" class=\"comment\" onClick=\"comment($i)\">
+                              <img src=\"../assets/img/icon/komentar.png\" class=\"comment\" onClick=\"comment($i)\">
                         </div>
                         
                         
