@@ -1,0 +1,120 @@
+*{
+    user-select: none;
+}
+
+
+body{
+    background-color: #d3d3d3;
+    font-family: arial;
+}
+
+.body {
+    text-align: center;
+    background-color: #EFEFEF;
+}
+
+
+
+.headline{
+    width: 100%;
+    height: 50px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+}
+
+.beitrag  {
+    width: 60%;
+    height: 230%;
+    border-style: solid;
+    border-color: #EFEFEF;
+
+    background-color: #EFEFEF;
+
+    margin: 3%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.logo{
+    top:0;
+    left:15%;
+    position: absolute;
+}
+
+.haus{
+    top:12;
+    left:78%;
+    position: absolute;
+}
+
+.teilen{
+    top:12;
+    left:80%;
+    position: absolute;
+}
+
+.kompass{
+    top:12;
+    left:82%;
+    position: absolute;
+}
+
+.dreipunkte{
+    top: 5;
+    left:860px;
+    position: absolute;
+}
+
+.teilenbeitrag{
+    top: 954;
+    left:83px;
+    position: absolute;
+}
+
+.lesezeichen{
+    top: 954;
+    left:860px;
+    position: absolute;
+}
+
+.heart{
+    position: relative;
+    text-align: end;
+}
+#Herz{
+    float: right;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+}
+span#Like_anzahl{
+    margin: 8px;
+}
+.comment,
+.Like_anzahl{
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+.Like_anzahl{
+    font-size: 25px;
+    margin: 5px;
+    margin-right: 0px;
+}
+
+p{
+    user-select: text;
+}
+
+::selection {
+    background: #222222;
+    color: #fff;
+}
