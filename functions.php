@@ -113,7 +113,6 @@ if(
     }else{
         echo "du darfst keine bösen wörter benutzen!";
     }
-    }
 
     function cookielesen(){
         #Kontrollieren ob User Angemeldet ist
@@ -123,10 +122,17 @@ if(
         }else{
             header('Location: http://jamie.ml/unterseiten/login.php');
         }
-}
 
+function cookielesen(){
+    #Kontrollieren ob User Angemeldet ist
+    $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
+    if(is_numeric($cookiewert)){
+        header('Location: http://jamie.ml/unterseiten/start.php');
+    }else{
+        header('Location: http://jamie.ml/unterseiten/login.php');
+    }
+}
 //Startseite
-<?php
 
 function passwort_sicher($passwort){
 
