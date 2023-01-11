@@ -5,10 +5,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>Document</title>
+      <title>Insta | Home</title>
 
       <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
+      <link rel="stylesheet" type="text/css" href="../assets/css/start.css">
 </head>
 
 <body>
@@ -18,33 +18,172 @@
       <div class="logo">
             <a href="projekt.php"><img src="../assets/img/icon/instagramlogo.jpg" width="130" height="50"></a>
       </div>
-      <form>
-            <input type="Text" name="" value="" size="40" placeholder="Suchen">
-      </form>
 
       <div class="haus">
-            <a href="projekt.php"><img src="../assets/img/icon/haus.jpg" width="25" height="25"></a>
+            <a href="start.php"><img src="../assets/img/icon/haus.jpg" width="25" height="25"></a>
       </div>
 
       <div class="teilen">
-            <a href=""><img src="../assets/img/icon/teilen.jpg" width="25" height="25"></a>
+            <a href="upload.php"><img src="../assets/img/icon/upload.png" width="25" height="25"></a>
       </div>
 
-      <div class="kompass">
-            <a href=""><img src="../assets/img/icon/kompass.jpg" width="25" height="25"></a>
-      </div>
 
-      <div class="herz">
-            <a href=""><img src="../assets/img/icon/herz.jpg" width="30" height="30"></a>
-      </div>
         
 
             <?php
+
+                  function minus_eins(){
+                        
+                  }
+
+                  function ausgeben(){
+
+                        $user_gesamt = user_gesamt();   
+                        $userID = random_custom($user_gesamt);
+                  
+                        $post_anzahl = post_gesamt($userID);
+                        $postID = random_custom($post_anzahl);
+                        
+                        if (file_exists("../assets/data/$userID/post/$postID/PostText.txt")) {
+                              $data = fopen("../assets/data/$userID/post/$postID/PostText.txt","r+");
+                        
+                              $text = fgets($data);
+                        
+                              $user = user_ID_zu_Name($userID);
+                        
+                              $post_text = "<b>$user</b><p>$text</p>";
+                              
+                              fclose($data);
+                        
+                              #Likes
+                        
+                              $like_datei = fopen("../assets/data/$userID/post/$postID/likes.txt","r+");
+                              
+                              $Like_anzahl = fgets($like_datei);
+                        
+                              fclose($like_datei);
+                              
+                              $array["a"] = "$post_text";
+                              $array["b"] = "$userID";
+                              $array["c"] = "$postID";
+                              $array["d"] = "$Like_anzahl";
+                              return $array;
+
+                          } else {
+                              $postID = $postID-1;
+                              if (file_exists("../assets/data/$userID/post/$postID/PostText.txt")) {
+                                    $data = fopen("../assets/data/$userID/post/$postID/PostText.txt","r+");
+                              
+                                    $text = fgets($data);
+                              
+                                    $user = user_ID_zu_Name($userID);
+                              
+                                    $post_text = "<b>$user</b><p>$text</p>";
+                                    
+                                    fclose($data);
+                              
+                                    #Likes
+                              
+                                    $like_datei = fopen("../assets/data/$userID/post/$postID/likes.txt","r+");
+                                    
+                                    $Like_anzahl = fgets($like_datei);
+                              
+                                    fclose($like_datei);
+                                    
+                                    $array["a"] = "$post_text";
+                                    $array["b"] = "$userID";
+                                    $array["c"] = "$postID";
+                                    $array["d"] = "$Like_anzahl";
+                                    return $array;
+      
+                                } else {
+                                    $postID = $postID-1;
+                                    if (file_exists("../assets/data/$userID/post/$postID/PostText.txt")) {
+                                          $data = fopen("../assets/data/$userID/post/$postID/PostText.txt","r+");
+                                    
+                                          $text = fgets($data);
+                                    
+                                          $user = user_ID_zu_Name($userID);
+                                    
+                                          $post_text = "<b>$user</b><p>$text</p>";
+                                          
+                                          fclose($data);
+                                    
+                                          #Likes
+                                    
+                                          $like_datei = fopen("../assets/data/$userID/post/$postID/likes.txt","r+");
+                                          
+                                          $Like_anzahl = fgets($like_datei);
+                                    
+                                          fclose($like_datei);
+                                          
+                                          $array["a"] = "$post_text";
+                                          $array["b"] = "$userID";
+                                          $array["c"] = "$postID";
+                                          $array["d"] = "$Like_anzahl";
+                                          return $array;
             
+                                      } else {
+                                          $postID = $postID-1;
+                                          if (file_exists("../assets/data/$userID/post/$postID/PostText.txt")) {
+                                                $data = fopen("../assets/data/$userID/post/$postID/PostText.txt","r+");
+                                          
+                                                $text = fgets($data);
+                                          
+                                                $user = user_ID_zu_Name($userID);
+                                          
+                                                $post_text = "<b>$user</b><p>$text</p>";
+                                                
+                                                fclose($data);
+                                          
+                                                #Likes
+                                          
+                                                $like_datei = fopen("../assets/data/$userID/post/$postID/likes.txt","r+");
+                                                
+                                                $Like_anzahl = fgets($like_datei);
+                                          
+                                                fclose($like_datei);
+                                                
+                                                $array["a"] = "$post_text";
+                                                $array["b"] = "$userID";
+                                                $array["c"] = "$postID";
+                                                $array["d"] = "$Like_anzahl";
+                                                return $array;
+                  
+                                            } else {
+                  
+                                            }
+                                      }
+                                }
+                          }
+
+                        
+                  }
+                  
+                  function random_custom($max){
+                        $zufall = rand(1,$max);
+                        return($zufall);
+                  }
+                        
+                  
+                  
+                  function user_ID_zu_Name($userID){
+                  
+                        $dateii = fopen("../assets/data/$userID/benutzerdaten/username.txt","r");
+                        $userName = fgets($dateii);
+                        fclose($dateii);
+                        return($userName);
+                  }
+  
+
+
             include("../functions.php");
+
+
             echo "<script language=\"javascript\" type=\"text/javascript\" src=\"../assets/js/home.js\"></script>";
 
-            for($i=1;$i<100;$i++){
+            for($i=1;$i<500;$i++){
+            
 
             $ausgabe = ausgeben();
 
@@ -71,14 +210,14 @@
                               </a>
                         </div>
 
-                        <div class=\"comment\">
-                              <img src=\"../assets/img/icon/komentar.png\" class=\"comment\" onClick=\"comment($i)\">
-                        </div>
+
                         
                         
                   </div>
             </div>
             ";
+
+            
             }
             #<a href="comment-save.php?user=$user&comment=$comment&creator=$creator&post=$post"></a>
             ?>

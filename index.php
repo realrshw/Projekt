@@ -11,8 +11,21 @@
     <body>
 
         <?php
-        include 'functions.php';
+        include "functions.php";
+        
         cookielesen();
+
+
+        #Kann die functions.php nicht öffnen.
+        function cookielesen(){
+            #Kontrollieren ob User Angemeldet ist
+            $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
+            if(is_numeric($cookiewert)){
+                header('Location: unterseiten/start.php');
+            }else{
+                header('Location: unterseiten/login.php');
+            }
+        }
         ?>
             
     </body>

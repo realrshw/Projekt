@@ -1,41 +1,82 @@
 <?php
+//usergesamt
+function user_gesamt (){
+        
+    $c=-2;
+
+    $pfad="../assets/data/";
+    $verz = opendir($pfad);
+    while ($file=readdir($verz))
+    {
+        if (filetype($pfad.$file)=="dir")
+        {
+            $c++;
+        }
+    }
+    closedir($verz);
+    return($c);
+}
+
+function post_gesamt($user2){
+                        
+    $c2=0;
+    $userID2 = $user2;
+
+    $pfad2="../assets/data/$userID2/";
+    $verz2 = opendir($pfad2);
+    while ($file=readdir($verz2))
+    {
+        if (filetype($pfad2.$file)=="dir")
+        {
+            $c2++;
+        }
+    }
+    closedir($verz2);
+    return($c2);
+}
+
 //login
     function login(){
         
         $email = $_POST["email"];
         $password = $_POST["password"];
 
-        
+        $max_user_login = 10;
         $i = 1;
-        $j = 100;
+        $j = $max_user_login;
         
         while($i < $j){
 
-        $datei_mail = fopen("../assets/userdata/$i/email.txt","r+");
+        $datei_mail = fopen("../assets/data/$i/benutzerdaten/email.txt","r+");
         $mail_check = fgets($datei_mail);
         fclose($datei_mail);
         
-        $datei_pass = fopen("../assets/userdata/$i/passwort.txt","r+");
+        $datei_pass = fopen("../assets/data/$i/benutzerdaten/passwort.txt","r+");
         $pass_check = fgets($datei_pass);
         fclose($datei_pass);
 
         
-        #Cookie anlegen
-        setcookie('userid', '$i', time()+3600000); 
+        
 
         if($mail_check == $email && $pass_check == $password){
 
-            header("location: unterseiten/start.php");break;
+            header("location: start.php");break;
             
         }else{
-            // header("location: /fertig");
+            // header("location: start.php");
             $i++;
         }
-        if($mail_check != $email || $pass_check != $password){
-            // header("location: ../unterseiten");
-            // echo "hallo das war falsch";
-        }
+        // if($mail_check != $email || $pass_check != $password){
+        //     header("location: ../unterseiten");
+        //     // echo "hallo das war falsch";
+        // }
+        
+        
+        #Cookie anlegen
+        setcookie('userID', '$i', time()+3600000); 
+
     }
+
 
     }
 
@@ -66,7 +107,7 @@ if(
             if(!file_exists("../assets/data/$i")){
                 mkdir("../assets/data/$i",0777,true);
                 mkdir("../assets/data/$i/benutzerdaten",0777,true);
-                mkdir("../assets/data/$i/POST",0777,true);break;
+                mkdir("../assets/data/$i/post",0777,true);break;
             }else{
                 $i++;
             }
@@ -100,7 +141,7 @@ if(
         fwrite($datei_nachname,$nachname);
         fclose($datei_nachname);
 
-        $datei_user = fopen("../assets/data/$zahl/benutzerdaten/user.txt","w+");
+        $datei_user = fopen("../assets/data/$zahl/benutzerdaten/username.txt","w+");
         fwrite($datei_user,$user);
         fclose($datei_user);
 
@@ -108,30 +149,26 @@ if(
         fwrite($datei_user_id,$user_id);
         fclose($datei_user_id);
 
-        // header("location: /home");
+        setcookie("Cookie_UserID", $user_id);
+
+        header("location: start.php");
 
     }else{
         echo "du darfst keine bösen wörter benutzen!";
     }
 
-    function cookielesen(){
-        #Kontrollieren ob User Angemeldet ist
-        $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
-        if(is_numeric($cookiewert)){
-            header('Location: http://jamie.ml/unterseiten/start.php');
-        }else{
-            header('Location: http://jamie.ml/unterseiten/login.php');
-        }
 
 function cookielesen(){
     #Kontrollieren ob User Angemeldet ist
-    $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
+    $cookiewert = $_COOKIE['userID']; // Inhalt des Cookies in anderer Variable speichern
     if(is_numeric($cookiewert)){
-        header('Location: http://jamie.ml/unterseiten/start.php');
+        header('Location: unterseiten/start.php');
     }else{
-        header('Location: http://jamie.ml/unterseiten/login.php');
+        header('Location: unterseiten/login.php');
     }
 }
+
+
 //Startseite
 
 function passwort_sicher($passwort){
@@ -240,40 +277,6 @@ function random_custom($max){
     $zufall = rand(1,$max);
     return($zufall);
 }
-        
-function user_gesamt (){
-        
-    $c=-2;
-
-    $pfad="../assets/data/";
-    $verz = opendir($pfad);
-    while ($file=readdir($verz))
-    {
-        if (filetype($pfad.$file)=="dir")
-        {
-            $c++;
-        }
-    }
-    closedir($verz);
-    return($c);
-
-}
-function post_gesamt($user){
-        
-    $c=0;
-
-    $pfad="../assets/data/$user/";
-    $verz=opendir ($pfad);
-    while ($file=readdir($verz))
-    {
-        if (filetype($pfad.$file)=="dir")
-        {
-            $c++;
-        }
-    }
-    closedir($verz);
-    return($c);
-}
 
     function user_ID_zu_Name($userID){
 
@@ -283,5 +286,5 @@ function post_gesamt($user){
         return($userName);
     }
 
-?>
+}
 ?>
