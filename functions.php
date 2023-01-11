@@ -3,7 +3,7 @@
     function login(){
         
         $email = $_POST["email"];
-        $passwort = $_POST["password"];
+        $password = $_POST["password"];
 
         
         $i = 1;
@@ -11,25 +11,29 @@
         
         while($i < $j){
 
-        $datei_mail = fopen("assets/userdata/$i/email.txt","r+");
+        $datei_mail = fopen("../assets/userdata/$i/email.txt","r+");
         $mail_check = fgets($datei_mail);
         fclose($datei_mail);
         
-        $datei_pass = fopen("assets/userdata/$i/passwort.txt","r+");
+        $datei_pass = fopen("../assets/userdata/$i/passwort.txt","r+");
         $pass_check = fgets($datei_pass);
         fclose($datei_pass);
+
         
         #Cookie anlegen
         setcookie('userid', '$i', time()+3600000); 
 
-        if($mail_check == $email && $pass_check == $passwort){
+        if($mail_check == $email && $pass_check == $password){
 
-            header("location: https://jamie.ml/unterseiten/start.php");
-            break;
+            header("location: unterseiten/start.php");break;
             
         }else{
-            header("location: /fertig");
+            // header("location: /fertig");
             $i++;
+        }
+        if($mail_check != $email || $pass_check != $password){
+            // header("location: ../unterseiten");
+            // echo "hallo das war falsch";
         }
     }
 
@@ -38,19 +42,31 @@
 //registratiom
     function register(){
 
-    if(isset($_POST["username"]) && $_POST["username"] != "" && isset($_POST["email"]) && $_POST["email"] != "" && isset($_POST["password"]) && $_POST["password"] != "" && isset($_POST["vorname"]) && $_POST["vorname"] != "" && isset($_POST["nachname"]) && $_POST["nachname"] != ""){
+   
+    $sicher = $_POST["username"];
+
+if(
+    $sicher != "Hurensohn"     || $sicher != "Neger"         ||$sicher != "Wichser"      || $sicher != "Nigger"		||$sicher != "Spast" 	   || $sicher != "Nutte"     || $sicher != "Penis"      || $sicher != "Arschloch" 
+    || $sicher != "Arsch" 	   || $sicher != "Hoden"         || $sicher != "Hodenkobolt" || $sicher != "Schwanz" 	|| $sicher != "Schwul" 	   || $sicher != "Nuttensohn"|| $sicher != "Fotze"      || $sicher != "Jude"
+    || $sicher != "Hitler"     || $sicher != "LGBTQ"         || $sicher != "Huhrensohn"  || $sicher != "Pimmelkopf" || $sicher != "kanacke"    || $sicher != "Bastard"   || $sicher != "Hure"       || $sicher != "schwuchtel"
+    || $sicher != "H0nd"       || $sicher != "Nuttentochter" || $sicher != "Hurentochter"|| $sicher != "Nerd" 		|| $sicher != "Pisser" 	   || $sicher != "Ficke"     || $sicher != "Trottel"    || $sicher != "fick dich"
+    || $sicher != "Vollidiot"  || $sicher != "Wixxer"        || $sicher != "Dulli"       || $sicher != "Misststück" || $sicher != "Penner"	   || $sicher != "Schlange"  || $sicher != "Hund"       || $sicher != "Nazi"
+    || $sicher != "cook"       || $sicher != "fettsack"      || $sicher != "Schlampe"    || $sicher != "HS"			|| $sicher != "Hässlich"   || $sicher != "gay"       || $sicher != "knecht"     || $sicher != "sklave"
+    || $sicher != "ficken"     || $sicher != "scheiß"        || $sicher != "opfer"       || $sicher != "Abfall"		|| $sicher != "Hosenknecht"|| $sicher != "Idiot"     || $sicher != "depp"       || $sicher != "Heil"
+    || $sicher != "rechte hand"|| $sicher != "hatzer"        || $sicher != "pussy"       || $sicher != "ALkohol"	|| $sicher != "bastard"	   || $sicher != "Sau"       || $sicher != "Arschficker"|| $sicher != "miststück"
+    || $sicher != "Hundesohn"  || $sicher != "Nerds"		 || $sicher != "schwarzer"   || $sicher != "Yarak"      || $sicher != "Tusse"      || $sicher != "tussi"     || $sicher != "Transe"     || $sicher != "Streber"
+    || $sicher != "Schnepfe"
+){
 
         
         $i = 1;
-        $j = 1000;
+        $j = 100;
 
         while($i < $j){
-            if(!file_exists("assets/userdata/$i")){
-                mkdir("/assets/userdata/$i","0700", true);break;
-                mkdir("/assets/userdata/$i/benutzerdaten", "0700",true);
-                mkdir("/assets/userdata/$i/post", "0700",true);
-                mkdir("/assets/userdata/$i/abonnierte", "0700",true);
-                mkdir("/assets/userdata/$i/messenger", "0700",true);
+            if(!file_exists("../assets/data/$i")){
+                mkdir("../assets/data/$i",0777,true);
+                mkdir("../assets/data/$i/benutzerdaten",0777,true);
+                mkdir("../assets/data/$i/POST",0777,true);break;
             }else{
                 $i++;
             }
@@ -60,46 +76,45 @@
 
             $user = $_POST["username"];
             $email = $_POST["email"];
-            $passwort = $_POST["password"];
+            $passowrd = $_POST["password"];
             $vorname = $_POST["vorname"];
             $nachname = $_POST["nachname"];
         
         $user_id = $zahl;
+
         
 
-        #Cookie anlegen
-        setcookie('userid', '$zahl', time()+3600000);
-
-        $datei_pass = fopen("/assets/userdata/$zahl/benutzerdaten/passwort.txt","w+");
-        fwrite($datei_pass,$passwort);
+        $datei_pass = fopen("../assets/data/$zahl/benutzerdaten/passwort.txt","w+");
+        fwrite($datei_pass,$passowrd);
         fclose($datei_pass);
         
-        $datei_email = fopen("/assets/userdata/$zahl/benutzerdaten/email.txt","w+");
+        $datei_email = fopen("../assets/data/$zahl/benutzerdaten/email.txt","w+");
         fwrite($datei_email,$email);
         fclose($datei_email);
 
-        $datei_vorname = fopen("/assets/userdata/$zahl/benutzerdaten/vorname.txt","w+");
+        $datei_vorname = fopen("../assets/data/$zahl/benutzerdaten/vorname.txt","w+");
         fwrite($datei_vorname,$vorname);
         fclose($datei_vorname);
         
-        $datei_nachname = fopen("/assets/userdata/$zahl/benutzerdaten/nachname.txt","w+");
+        $datei_nachname = fopen("../assets/data/$zahl/benutzerdaten/nachname.txt","w+");
         fwrite($datei_nachname,$nachname);
         fclose($datei_nachname);
 
-        $datei_user = fopen("/assets/userdata/$zahl/benutzerdaten/user.txt","w+");
+        $datei_user = fopen("../assets/data/$zahl/benutzerdaten/user.txt","w+");
         fwrite($datei_user,$user);
         fclose($datei_user);
 
-        $datei_user_id = fopen("/assets/userdata/$zahl/benutzerdaten/user_id.txt","w+");
+        $datei_user_id = fopen("../assets/data/$zahl/benutzerdaten/user_id.txt","w+");
         fwrite($datei_user_id,$user_id);
         fclose($datei_user_id);
 
-        header("location: https://jamie.ml/unterseiten/start.php");
+        // header("location: /home");
 
-        }else{
-            echo "Ewas hast du vergessen";
-        }
+    }else{
+        echo "du darfst keine bösen wörter benutzen!";
     }
+    }
+
     function cookielesen(){
         #Kontrollieren ob User Angemeldet ist
         $cookiewert = $_COOKIE['userid']; // Inhalt des Cookies in anderer Variable speichern
