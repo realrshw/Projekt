@@ -1,0 +1,8 @@
+suchensenden.php - benutzersucheformular
+chatnutzersuche.php - sucht in den angemeldeten benutzern und gibt die möglichkeit zum chatten
+chat.php - gibt vorhandene chats aus oder gibt die möglichkeit einen neuen chat zu schreiben 
+chatsenden.php - chatformular (sendet die nachricht an das script zum speichern)
+chatspeichern.php - speichert den eintrag für den chat und springt dann zurück zur eingabe
+chatpartner.php - gibt die liste aller benutzer aus mit denen man gechattet hat
+
+index.html - datei mit allen modulen zusammen als demo
