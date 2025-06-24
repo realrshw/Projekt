@@ -4,6 +4,7 @@
     <meta charset="UTF-8" http-equiv="refresh" content="">
     <title>Instagram</title>
     <link rel="stylesheet" href="../assets/css/login.css">
+    <script language="javascript" type="text/javascript" src="../assets/js/login.js"></script>
 </head>
 <body>
 
@@ -47,7 +48,7 @@
                 <form action="" method="POST">
                     <input placeholder="Vorname" type="text" name="vorname" id="" required><br>
                     <input placeholder="Nachname" type="text" name="nachname" id="" required><br>
-                    <input placeholder="Benutzername" type="text" name="username" id="" required><br>
+                    <input placeholder="Benutzername" type="text" name="username" id="usernamefeld" required OnMouseout="usernamecheck();"><br>
                     <input placeholder="E-Mail" type="email" name="email" id="" required><br>
                     <input placeholder="Passwort" type="password" name="password" id="" required><br>
                     <input type="submit" name="register" value="Registrieren">
